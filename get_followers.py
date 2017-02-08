@@ -23,5 +23,8 @@ time = datetime.datetime.now().strftime("%Y-%m-%d %I:%M:%S")
 
 print time + ","  +count
 
-with open ("stats.txt","a") as stats:
+today = datetime.datetime.now().strftime("%Y%m%d")
+
+with open (today + "-stats.txt","a") as stats:
 	stats.write(time + "," + count + "\n")
+
