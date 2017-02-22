@@ -16,8 +16,10 @@ for line in r:
 
 try:	
 	count = re.search('"followed_by": {"count":\s(\d*)}' ,data).group(1) 
+except NameError:
+	sys.exit(0)
 except:
-	sys.exit(1)
+	sys.exit(0)
 
 time = datetime.datetime.now().strftime("%Y-%m-%d %I:%M:%S")
 
